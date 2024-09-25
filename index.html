@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blackhole Quiz</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="blackhole">
+        <img src="./assets/icons/black-hole.256x256.png" alt="" />
+      </div>
+      <div class="timer"><span id="time"></span></div>
+      <div id="scorePenalty" class="hide">-10</div>
+    </div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>BLACKHOLE QUIZ</h1>
+        <p>ANSWER THE QUESTIONS BEFORE TIME RUNS OUT!!!</p>
+        <p>Wrong answers: -10 Points!!</p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="options" class="options">Fuck</div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h1>GAME OVER</h1>
+        <p>Final Score: <span id="final-score"></span>!!</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <div id="scoreboard" class="wrapper">
+      <button id="viewHighscores" class="hide">View Highscores</button>
+      <div id="highscoreCard" class="start">
+        <h1>Highscores</h1>
+        <ol id="highscores"></ol>
+
+        <button id="hideHighscores">Hide</button>
+        <button id="clear">Clear Highscores</button>
+      </div>
+    </div>
+    <div class="start">
+      <button id="menu" class="hide">Menu</button>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
+</html>
