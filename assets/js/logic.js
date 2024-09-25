@@ -28,7 +28,16 @@ var olEl = document.getElementById("highscores");
 var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
 //game
-function startTime() {}
+function startTime() {
+  time--;
+  //time to page
+  timerEl.textContent = "⏱️ " + time;
+  //reach zero and end
+  if (time <= 0) {
+    clearInterval(timerId);
+    endQuiz();
+  }
+}
 
 function startQuiz() {}
 function getQuestion() {}
