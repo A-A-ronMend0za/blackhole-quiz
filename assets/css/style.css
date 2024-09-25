@@ -107,3 +107,10 @@ li:nth-child(odd) {
   right: 300px;
   font-size: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .blackhole {
+    width: 40px;
+    top: 600px;
+  }
+}
