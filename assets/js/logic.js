@@ -49,9 +49,26 @@ function startQuiz() {
 }
 
 function getQuestion() {
-  console.log("getQuestion() init");
+  var currentQuestion = questions[currentQuestionIndex];
+  questionTitleEl.textContent = currentQuestion.title;
+  optionsEl.textContent = "";
+
+  currentQuestion.options.forEach(function (option, i) {
+    var optionNode = document.createElement("button");
+    Object.assign(optionNode, {
+      class: "choice",
+      value: option,
+      textContent: i + 1 + " ◎ " + option,
+      onclick: optionClick,
+    });
+
+    optionsEl.appendChild(optionNode);
+  });
 }
-function optionClick() {}
+
+function optionClick() {
+  console.log("option button test");
+}
 function penaltyFlash() {}
 function endQuiz() {}
 
