@@ -30,17 +30,27 @@ var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 //game
 function startTime() {
   time--;
-  //time to page
   timerEl.textContent = "⏱️ " + time;
-  //reach zero and end
+
   if (time <= 0) {
     clearInterval(timerId);
     endQuiz();
   }
 }
 
-function startQuiz() {}
-function getQuestion() {}
+function startQuiz() {
+  startScreenEl.setAttribute("class", "hide");
+  hide();
+  viewBtn.setAttribute("class", "hide");
+  questionsEl.removeAttribute("class");
+  timerId = setInterval(startTime, 1000);
+  timerEl.textContent = "⏱️ " + time;
+  getQuestion();
+}
+
+function getQuestion() {
+  console.log("getQuestion() init");
+}
 function optionClick() {}
 function penaltyFlash() {}
 function endQuiz() {}
