@@ -47,7 +47,14 @@ function endQuiz() {}
 
 //scoreboard
 function menu() {}
-function hide() {}
+function hide() {
+  highscoresEl.setAttribute("class", "hide");
+  viewBtn.setAttribute("class", "start");
+  viewBtn.onclick = function () {
+    highscoresEl.setAttribute("class", "start");
+    viewBtn.setAttribute("class", "hide");
+  };
+}
 function saveScore() {}
 function printScores() {}
 function clearScoreboard() {}
