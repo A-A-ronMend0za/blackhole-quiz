@@ -4,10 +4,10 @@ var timerId;
 var timerEl = document.getElementById("time");
 
 //buttons
-var startButton = document.getElementById("start");
-var viewButton = document.getElementById("viewHighscores");
-var hideButton = document.getElementById("hideHighscores");
-var submitButton = document.getElementById("submit");
+var startBtn = document.getElementById("start");
+var viewBtn = document.getElementById("viewHighscores");
+var hideBtn = document.getElementById("hideHighscores");
+var submitBtn = document.getElementById("submit");
 
 //game
 var startScreenEl = document.getElementById("start-screen");
@@ -29,6 +29,7 @@ var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
 //game
 function startTime() {}
+
 function startQuiz() {}
 function getQuestion() {}
 function optionClick() {}
@@ -36,9 +37,14 @@ function penaltyFlash() {}
 function endQuiz() {}
 
 //scoreboard
-function menuBtn() {}
-function hideBtn() {}
+function menu() {}
+function hide() {}
 function saveScore() {}
 function printScores() {}
 function clearScoreboard() {}
 function checkForEnter() {}
+
+//keys and buttons
+startBtn.onclick = startQuiz;
+submitBtn.onclick = saveScore;
+hideBtn.onclick = hide;
