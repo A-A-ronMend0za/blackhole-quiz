@@ -26,3 +26,13 @@ var olEl = document.getElementById("highscores");
 
 //localstorage
 var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+function startTime() {
+  time--;
+  timerEl.textContent = "⏱️ " + time;
+
+  if (time <= 0) {
+    clearInterval(timerId);
+    quizEnd();
+  }
+}
