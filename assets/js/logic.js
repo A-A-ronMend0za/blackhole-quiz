@@ -162,7 +162,15 @@ function saveScore() {
 function printScores() {
   console.log(scoreboard);
 }
-function checkForEnter() {}
+
+function checkForEnter(event) {
+  if (event.key === "Enter") {
+    saveScore();
+  }
+}
+
+initialsEl.onkeyup = checkForEnter;
+
 function playAgain() {}
 function clearScoreboard() {}
 
