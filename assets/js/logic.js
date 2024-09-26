@@ -8,6 +8,8 @@ var startBtn = document.getElementById("start");
 var viewBtn = document.getElementById("viewHighscores");
 var hideBtn = document.getElementById("hideHighscores");
 var submitBtn = document.getElementById("submit");
+var playAgainBtn = document.getElementById("playAgain");
+var rulesBtn = document.getElementById("rules");
 
 //game
 var score;
@@ -171,10 +173,17 @@ function checkForEnter(event) {
 
 initialsEl.onkeyup = checkForEnter;
 
-function playAgain() {}
+function playAgain() {
+  console.log("play again button");
+}
+function rules() {
+  console.log("rules button");
+}
 function clearScoreboard() {}
 
 //keys and buttons
 startBtn.onclick = startQuiz;
 submitBtn.onclick = saveScore;
 hideBtn.onclick = hide;
+playAgainBtn.onclick = playAgain;
+rulesBtn.onclick = rules;
