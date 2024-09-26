@@ -10,6 +10,7 @@ var hideBtn = document.getElementById("hideHighscores");
 var submitBtn = document.getElementById("submit");
 
 //game
+var score;
 var startScreenEl = document.getElementById("start-screen");
 var questionTitleEl = document.getElementById("question-title");
 var questionsEl = document.getElementById("questions");
@@ -116,8 +117,16 @@ function penaltyFlash() {
 }
 
 function endQuiz() {
-  //hide timer
-  console.log("Game Over");
+  clearInterval(timerId);
+  currentQuestionIndex = 0;
+  timerEl.textContent = "";
+  score = time;
+  time = questions.length * 15;
+  finalScoreEl.textContent = score;
+  console.log(score, time, currentQuestionIndex);
+  questionsEl.setAttribute("class", "hide");
+  gameoverEl.setAttribute("class", "start");
+  finalScoreEl.textContent = score;
 }
 
 //scoreboard
