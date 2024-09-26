@@ -26,9 +26,18 @@ var initialsEl = document.getElementById("initials");
 var olEl = document.getElementById("highscores");
 
 //localstorage
-var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+var scoreboard = JSON.parse(window.localStorage.getItem("scoreboard")) || [];
 
 //game
+function hide() {
+  highscoresEl.setAttribute("class", "hide");
+  viewBtn.setAttribute("class", "start");
+  viewBtn.onclick = function () {
+    highscoresEl.setAttribute("class", "start");
+    viewBtn.setAttribute("class", "hide");
+  };
+}
+
 function startTime() {
   time--;
   timerEl.textContent = "⏱️ " + time;
@@ -123,26 +132,32 @@ function endQuiz() {
   score = time;
   time = questions.length * 15;
   finalScoreEl.textContent = score;
-  console.log(score, time, currentQuestionIndex);
   questionsEl.setAttribute("class", "hide");
   gameoverEl.setAttribute("class", "start");
   finalScoreEl.textContent = score;
 }
 
 //scoreboard
-function menu() {}
-function hide() {
-  highscoresEl.setAttribute("class", "hide");
-  viewBtn.setAttribute("class", "start");
-  viewBtn.onclick = function () {
-    highscoresEl.setAttribute("class", "start");
-    viewBtn.setAttribute("class", "hide");
-  };
+
+function saveScore() {
+  var initials = initialsEl.value.trim();
+  console.log(initials);
+
+  if (initials !== "") {
+    var newScore = {
+      score: score,
+      initials: initials,
+    };
+
+    scoreboard.push(newScore);
+    window.localStorage.setItem("scoreboard", JSON.stringify(scoreboard));
+    console.log(scoreboard);
+  }
 }
-function saveScore() {}
 function printScores() {}
 function clearScoreboard() {}
 function checkForEnter() {}
+function menu() {}
 
 //keys and buttons
 startBtn.onclick = startQuiz;
