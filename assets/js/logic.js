@@ -67,10 +67,39 @@ function getQuestion() {
 }
 
 function optionClick() {
-  console.log("option button test");
+  if (this.value !== questions[currentQuestionIndex].answer) {
+    time -= 10;
+    if (time < 0) {
+      time = 0;
+    }
+    timerEl.textContent = "⏱️ " + time;
+    feedbackEl.textContent =
+      "Incorrect. The correct answer was " +
+      questions[currentQuestionIndex].answer +
+      ".";
+    penaltyFlash();
+  } else {
+    feedbackEl.textContent = "CORRECT!! 💥 💥 💥 💥";
+  }
+
+  feedbackEl.setAttribute("class", "feedback");
+  setTimeout(function () {
+    feedbackEl.setAttribute("class", "hide");
+  }, 3000);
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex === questions.length) {
+    endQuiz();
+  } else {
+    getQuestion();
+  }
 }
 function penaltyFlash() {}
-function endQuiz() {}
+
+function endQuiz() {
+  //hide timer
+  console.log("Game Over");
+}
 
 //scoreboard
 function menu() {}
