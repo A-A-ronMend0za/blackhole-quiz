@@ -8,7 +8,6 @@ var startBtn = document.getElementById("start");
 var viewBtn = document.getElementById("viewHighscores");
 var hideBtn = document.getElementById("hideHighscores");
 var submitBtn = document.getElementById("submit");
-var playAgainBtns = document.getElementById("playAgainBtns");
 
 //game
 var score;
@@ -25,6 +24,7 @@ var gameoverEl = document.getElementById("end-screen");
 var highscoresEl = document.getElementById("highscoreCard");
 var initialsEl = document.getElementById("initials");
 var olEl = document.getElementById("highscores");
+var playAgainEl = document.getElementById("playAgainBtns");
 
 //localstorage
 var scoreboard = JSON.parse(window.localStorage.getItem("scoreboard")) || [];
@@ -154,7 +154,7 @@ function saveScore() {
 
     gameoverEl.setAttribute("class", "hide");
     highscoresEl.setAttribute("class", "wrapper start");
-    playAgainBtns.setAttribute("class", "start");
+    playAgainEl.setAttribute("class", "start");
     printScores();
   }
 }
