@@ -8,6 +8,7 @@ var startBtn = document.getElementById("start");
 var viewBtn = document.getElementById("viewHighscores");
 var hideBtn = document.getElementById("hideHighscores");
 var submitBtn = document.getElementById("submit");
+var playAgainBtns = document.getElementById("playAgainBtns");
 
 //game
 var score;
@@ -141,7 +142,6 @@ function endQuiz() {
 
 function saveScore() {
   var initials = initialsEl.value.trim();
-  console.log(initials);
 
   if (initials !== "") {
     var newScore = {
@@ -151,13 +151,20 @@ function saveScore() {
 
     scoreboard.push(newScore);
     window.localStorage.setItem("scoreboard", JSON.stringify(scoreboard));
-    console.log(scoreboard);
+
+    gameoverEl.setAttribute("class", "hide");
+    highscoresEl.setAttribute("class", "wrapper start");
+    playAgainBtns.setAttribute("class", "start");
+    printScores();
   }
 }
-function printScores() {}
-function clearScoreboard() {}
+
+function printScores() {
+  console.log(scoreboard);
+}
 function checkForEnter() {}
-function menu() {}
+function playAgain() {}
+function clearScoreboard() {}
 
 //keys and buttons
 startBtn.onclick = startQuiz;
