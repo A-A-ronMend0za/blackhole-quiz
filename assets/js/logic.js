@@ -78,15 +78,17 @@ function optionClick() {
       questions[currentQuestionIndex].answer +
       ".";
     penaltyFlash();
+    setTimeout(function () {
+      feedbackEl.setAttribute("class", "hide");
+    }, 4000);
   } else {
     feedbackEl.textContent = "CORRECT!! 💥 💥 💥 💥";
+    setTimeout(function () {
+      feedbackEl.setAttribute("class", "hide");
+    }, 1000);
   }
 
   feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function () {
-    feedbackEl.setAttribute("class", "hide");
-  }, 3000);
-
   currentQuestionIndex++;
   if (currentQuestionIndex === questions.length) {
     endQuiz();
@@ -94,7 +96,24 @@ function optionClick() {
     getQuestion();
   }
 }
-function penaltyFlash() {}
+
+function penaltyFlash() {
+  penaltyEl.setAttribute("class", "penalty");
+
+  var flashOff = setInterval(off, 200);
+  var flashOn = setInterval(on, 400);
+  function off() {
+    penaltyEl.setAttribute("class", "hide");
+  }
+  function on() {
+    penaltyEl.setAttribute("class", "penalty");
+  }
+  setTimeout(function () {
+    clearInterval(flashOff);
+    clearInterval(flashOn);
+    penaltyEl.setAttribute("class", "hide");
+  }, 1000);
+}
 
 function endQuiz() {
   //hide timer
