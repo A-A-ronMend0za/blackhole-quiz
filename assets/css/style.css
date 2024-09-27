@@ -1,8 +1,9 @@
 body {
   font-family: Arial;
   font-size: 120%;
-  background-color: black;
-  background-image: linear-gradient(to right, black, rgb(249, 133, 38));
+  background: url("../icon/black-hole.256x256.png") no-repeat top 100px right
+      100px,
+    linear-gradient(to right, black, rgb(249, 133, 38));
   color: black;
 }
 
@@ -35,9 +36,10 @@ button:hover {
 }
 
 .blackhole {
-  position: absolute;
+  background-attachment: fixed;
   top: 50px;
   right: 200px;
+  width: 256px;
 }
 
 .options button {
