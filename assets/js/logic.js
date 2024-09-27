@@ -185,10 +185,6 @@ function checkForEnter(event) {
 
 initialsEl.onkeyup = checkForEnter;
 
-function rules() {
-  console.log("rules button");
-}
-
 function clearScoreboard() {
   window.localStorage.removeItem("scoreboard");
   window.location.reload();
@@ -200,4 +196,7 @@ startBtn.onclick = startQuiz;
 submitBtn.onclick = saveScore;
 hideBtn.onclick = hide;
 playAgainBtn.onclick = startQuiz;
-rulesBtn.onclick = rules;
+rulesBtn.onclick = function () {
+  playAgainEl.setAttribute("class", "hide");
+  startScreenEl.setAttribute("class", "start");
+};
