@@ -189,7 +189,12 @@ function playAgain() {
 function rules() {
   console.log("rules button");
 }
-function clearScoreboard() {}
+
+function clearScoreboard() {
+  window.localStorage.removeItem("scoreboard");
+  window.location.reload();
+}
+document.getElementById("clear").onclick = clearScoreboard;
 
 //keys and buttons
 startBtn.onclick = startQuiz;
