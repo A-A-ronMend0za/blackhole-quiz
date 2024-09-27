@@ -162,8 +162,18 @@ function saveScore() {
 }
 
 function printScores() {
-  console.log(scoreboard);
+  olEl.textContent = "";
+  scoreboard.sort(function (a, b) {
+    return b.score - a.score;
+  });
+
+  scoreboard.forEach(function (score) {
+    var liTag = document.createElement("li");
+    liTag.textContent = score.initials + " - " + score.score;
+    olEl.appendChild(liTag);
+  });
 }
+printScores();
 
 function checkForEnter(event) {
   if (event.key === "Enter") {
