@@ -59,6 +59,8 @@ function startQuiz() {
   timerId = setInterval(startTime, 1000);
   timerEl.textContent = "⏱️ " + time;
   getQuestion();
+  playAgainEl.setAttribute("class", "hide");
+  initialsEl.value = "";
 }
 
 function getQuestion() {
@@ -183,9 +185,6 @@ function checkForEnter(event) {
 
 initialsEl.onkeyup = checkForEnter;
 
-function playAgain() {
-  console.log("play again button");
-}
 function rules() {
   console.log("rules button");
 }
@@ -200,5 +199,5 @@ document.getElementById("clear").onclick = clearScoreboard;
 startBtn.onclick = startQuiz;
 submitBtn.onclick = saveScore;
 hideBtn.onclick = hide;
-playAgainBtn.onclick = playAgain;
+playAgainBtn.onclick = startQuiz;
 rulesBtn.onclick = rules;
