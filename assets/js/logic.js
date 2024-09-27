@@ -43,7 +43,7 @@ function hide() {
 
 function startTime() {
   time--;
-  timerEl.textContent = "⏱️ " + time;
+  timerEl.textContent = "⏱ " + time;
 
   if (time <= 0) {
     clearInterval(timerId);
@@ -57,7 +57,7 @@ function startQuiz() {
   viewBtn.setAttribute("class", "hide");
   questionsEl.removeAttribute("class");
   timerId = setInterval(startTime, 1000);
-  timerEl.textContent = "⏱️ " + time;
+  timerEl.textContent = "⏱ " + time;
   getQuestion();
   playAgainEl.setAttribute("class", "hide");
   initialsEl.value = "";
@@ -87,7 +87,7 @@ function optionClick() {
     if (time < 0) {
       time = 0;
     }
-    timerEl.textContent = "⏱️ " + time;
+    timerEl.textContent = "⏱ " + time;
     feedbackEl.textContent =
       "Incorrect. The correct answer was " +
       questions[currentQuestionIndex].answer +

@@ -70,6 +70,10 @@ li:nth-child(odd) {
   max-width: 600px;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 .hide {
   display: none;
 }
@@ -84,15 +88,15 @@ li:nth-child(odd) {
   left: 10px;
 }
 
-p {
+.rulesText {
   font-size: 30px;
 }
 
 .penalty {
   color: red;
   position: absolute;
-  top: 500px;
-  right: 300px;
+  top: 210px;
+  left: 420px;
   font-size: 50px;
 }
 
@@ -107,13 +111,10 @@ p {
 
 .timer {
   position: absolute;
-  top: 420px;
-  right: 300px;
+  top: 125px;
+  left: 400px;
   font-size: 50px;
-}
-
-.title {
-  font-size: 50px;
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 768px) {
