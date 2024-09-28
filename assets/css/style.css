@@ -120,8 +120,38 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-  .blackhole {
-    width: 40px;
-    top: 600px;
+  body {
+    background: url("../icon/black-hole.256x256.png") no-repeat top 100px right
+        20px,
+      linear-gradient(to right, black, rgb(202, 89, 2));
+    color: whitesmoke;
+  }
+
+  .wrapper {
+    margin: 10px auto 0 auto;
+    max-width: 600px;
+  }
+
+  .questions {
+    margin: 60px 10px 10px 10px;
+  }
+  .options {
+    margin-top: 60px;
+  }
+  .timer {
+    position: absolute;
+    top: 500px;
+    left: 140px;
+    font-size: 60px;
+  }
+  button {
+    height: 50px;
+  }
+  .penalty {
+    color: red;
+    position: absolute;
+    top: 580px;
+    left: 180px;
+    font-size: 50px;
   }
 }

@@ -55,7 +55,7 @@ function startQuiz() {
   startScreenEl.setAttribute("class", "hide");
   hide();
   viewBtn.setAttribute("class", "hide");
-  questionsEl.removeAttribute("class");
+  questionsEl.setAttribute("class", "questions");
   timerId = setInterval(startTime, 1000);
   timerEl.textContent = "⏱ " + time;
   getQuestion();
