@@ -44,4 +44,19 @@ var questions = [
     options: ["1971", "1983", "2004", "2019"],
     answer: "2019",
   },
+  {
+    title: "What direction does Time move at in the center of a Blackhole?",
+    options: [
+      "Forward",
+      "Backward",
+      "No Direction (Stops)",
+      "Interdimensionally (New Direction)",
+    ],
+    answer: "No Direction (Stops)",
+  },
+  {
+    title: "What year was the first Blackhole Found?",
+    options: ["1916", "1983", "2004", "2019"],
+    answer: "1916",
+  },
 ];
