@@ -121,10 +121,12 @@ h1 {
 
 @media screen and (max-width: 768px) {
   body {
-    background: url("../icon/black-hole.256x256.png") no-repeat top 100px right
+    /* background: url("../icon/black-hole.256x256.png") no-repeat top 100px right
         20px,
-      linear-gradient(to right, black, rgb(202, 89, 2));
-    color: whitesmoke;
+      linear-gradient(to right, black, rgb(202, 89, 2)); */
+    background: black url("../icon/blackholequiz2.jpg") no-repeat fixed center;
+
+    color: rgb(236, 28, 28);
   }
 
   .wrapper {
