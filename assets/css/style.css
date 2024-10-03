@@ -146,6 +146,9 @@ p {
       linear-gradient(to right, black, rgb(202, 89, 2)); */
     background: black url("../icon/blackholequiz2.jpg") no-repeat fixed center;
   }
+  h2 {
+    font-size: 30px;
+  }
 
   .blackhole {
     display: none;
