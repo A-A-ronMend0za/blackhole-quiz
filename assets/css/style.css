@@ -3,6 +3,7 @@ body {
   font-size: 120%;
   background-color: black;
   background-image: url("../icon/blackholeQuizBackgroundImg.jpg");
+  display: block;
 }
 
 a {
@@ -134,9 +135,8 @@ p {
 }
 
 .footer {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
+  bottom: 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -172,7 +172,7 @@ p {
     position: absolute;
     top: 500px;
     left: 115px;
-    font-size: 60px;
+    font-size: 40px;
   }
   button {
     height: 50px;
