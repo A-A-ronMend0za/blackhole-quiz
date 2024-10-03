@@ -22,10 +22,10 @@ button {
   margin: 5px;
   cursor: pointer;
   font-size: 100%;
-  background-color: red;
+  background-color: black;
   border-radius: 5px;
   padding: 2px 10px;
-  color: yellow;
+  color: whitesmoke;
   border: 0;
   transition: background-color 0.1s;
 }
@@ -59,12 +59,16 @@ ol {
 }
 
 li {
+  color: white;
+  text-shadow: 0px 0px 6px black, 2px 2px 3px black;
   padding: 5px;
   list-style: decimal inside none;
 }
 
 li:nth-child(odd) {
-  background-color: #bd7f03;
+  background-color: #bd0303;
+  color: black;
+  text-shadow: none;
 }
 
 .wrapper {
@@ -125,8 +129,16 @@ h1 {
         20px,
       linear-gradient(to right, black, rgb(202, 89, 2)); */
     background: black url("../icon/blackholequiz2.jpg") no-repeat fixed center;
+  }
 
-    color: rgb(236, 28, 28);
+  h1,
+  h2 {
+    color: black;
+    text-shadow: 0px 0px 8px white;
+  }
+  p {
+    color: rgb(195, 57, 57);
+    text-shadow: 0px 0px 6px black, 2px 2px 3px black;
   }
 
   .wrapper {
@@ -140,10 +152,13 @@ h1 {
   .options {
     margin-top: 60px;
   }
+  .options button {
+    width: 320px;
+  }
   .timer {
     position: absolute;
     top: 500px;
-    left: 140px;
+    left: 115px;
     font-size: 60px;
   }
   button {
