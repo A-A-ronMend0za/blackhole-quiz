@@ -43,7 +43,7 @@ button:hover {
 
 .options button {
   display: block;
-  width: 400px;
+  width: 100%;
   text-align: left;
 }
 
@@ -80,10 +80,12 @@ h2,
 h5 {
   font-size: 50px;
   color: black;
-  text-shadow: 0px 0px 8px white;
+  text-shadow: 0px 0px 2px blue, 0px 0px 5px white,
+    0px 0px 8px rgb(248, 172, 95), 0px 0px 12px red, 0px 0px 18px yellow;
 }
 h5 {
   font-size: small;
+  margin-bottom: 1px;
 }
 
 p {
@@ -93,6 +95,10 @@ p {
 
 .hide {
   display: none;
+}
+
+.questionTitle {
+  min-height: 107px;
 }
 
 .start {
@@ -115,6 +121,7 @@ p {
   top: 210px;
   left: 420px;
   font-size: 50px;
+  text-shadow: 0px 0px 3px black, 0px 0px 6px black, 0px 0px 10px black;
 }
 
 .feedback {
@@ -122,7 +129,7 @@ p {
   font-size: 120%;
   margin-top: 20px;
   padding-top: 10px;
-  color: gray;
+  color: white;
   border-top: 2px solid #ccc;
 }
 
@@ -132,11 +139,13 @@ p {
   left: 400px;
   font-size: 50px;
   color: whitesmoke;
+  text-shadow: 0px 0px 3px black, 0px 0px 6px black, 0px 0px 10px black;
 }
 
 .footer {
-  bottom: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 @media screen and (max-width: 768px) {
@@ -160,28 +169,35 @@ p {
   }
 
   .questions {
-    margin: 60px 10px 10px 10px;
+    margin: 10px;
   }
-  .options {
-    margin-top: 60px;
+
+  .questionTitle {
+    margin: auto;
   }
+
   .options button {
-    width: 320px;
+    width: 100%;
   }
   .timer {
-    position: absolute;
-    top: 500px;
-    left: 115px;
-    font-size: 40px;
+    position: relative;
+    top: auto;
+    left: auto;
   }
-  button {
-    height: 50px;
+
+  .timePenalty {
+    margin: 15px 10px;
+    display: flex;
+    justify-content: space-between;
   }
+
   .penalty {
-    color: red;
-    position: absolute;
-    top: 580px;
-    left: 180px;
-    font-size: 50px;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  button {
+    height: 60px;
   }
 }

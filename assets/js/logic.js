@@ -200,3 +200,15 @@ rulesBtn.onclick = function () {
   playAgainEl.setAttribute("class", "hide");
   startScreenEl.setAttribute("class", "start");
 };
+
+//to fix timer and penalty placements
+function timerStyle() {
+  startQuiz();
+  clearInterval(timerId);
+  timerId = 60;
+  feedbackEl.setAttribute("class", "feedback");
+  penaltyEl.setAttribute("class", "penalty");
+  feedbackEl.textContent = "CORRECT!! 💥 💥 💥 💥";
+}
+
+// timerStyle();
