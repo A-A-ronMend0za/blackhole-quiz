@@ -156,9 +156,13 @@ p {
 }
 
 .footer {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: baseline; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
