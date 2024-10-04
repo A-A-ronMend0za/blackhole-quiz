@@ -70,9 +70,10 @@ li {
 }
 
 li:nth-child(odd) {
-  background-color: #bd0303;
+  background-color: black;
   color: black;
-  text-shadow: none;
+  text-shadow: 0px 0px 2px white, 0px 0px 5px white,
+    0px 0px 8px rgb(248, 172, 95), 0px 0px 12px red, 0px 0px 18px yellow;
 }
 
 .wrapper {
@@ -94,7 +95,7 @@ h5 {
 }
 
 p {
-  color: rgb(195, 57, 57);
+  color: white;
   text-shadow: 0px 0px 6px black, 2px 2px 3px black;
 }
 
