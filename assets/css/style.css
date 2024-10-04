@@ -1,3 +1,7 @@
+/* * {
+  border-style: solid;
+} */
+
 body {
   font-family: Arial;
   font-size: 120%;
@@ -53,6 +57,7 @@ input[type="text"] {
 
 ol {
   padding-left: 0px;
+  padding-bottom: 20px;
   max-height: 400px;
   overflow: auto;
 }
@@ -98,7 +103,7 @@ p {
 }
 
 .questionTitle {
-  min-height: 107px;
+  min-height: 177px;
 }
 
 .start {
@@ -174,6 +179,7 @@ p {
 
   .questionTitle {
     margin: auto;
+    min-height: 107px;
   }
 
   .options button {
