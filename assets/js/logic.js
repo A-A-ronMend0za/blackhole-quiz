@@ -192,7 +192,10 @@ function clearScoreboard() {
 document.getElementById("clear").onclick = clearScoreboard;
 
 //keys and buttons
-startBtn.onclick = startQuiz;
+startBtn.onclick = function () {
+  // setTimeout(startQuiz, 1000);
+  startBtn.setAttribute("class", "startBtn clicked");
+};
 submitBtn.onclick = saveScore;
 hideBtn.onclick = hide;
 playAgainBtn.onclick = startQuiz;
