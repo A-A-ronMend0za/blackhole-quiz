@@ -193,7 +193,7 @@ document.getElementById("clear").onclick = clearScoreboard;
 
 //keys and buttons
 startBtn.onclick = function () {
-  // setTimeout(startQuiz, 1000);
+  setTimeout(startQuiz, 1000);
   startBtn.setAttribute("class", "startBtn clicked");
 };
 submitBtn.onclick = saveScore;
