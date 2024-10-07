@@ -7,17 +7,9 @@ body {
   font-size: 120%;
   background-color: black;
   background-image: url("../icon/blackholeQuizBackgroundImg.jpg");
+
+  background-size: 100%;
   display: block;
-}
-
-a {
-  color: #563d7c;
-  text-decoration: none;
-  transition: color 0.1s;
-}
-
-a:hover {
-  color: #8570a5;
 }
 
 .blackhole {
@@ -107,11 +99,11 @@ button {
   padding: 2px 10px;
   color: whitesmoke;
   border: 0;
-  transition: background-color 0.1s;
+  transition: 0.1s;
 }
 
 button:hover {
-  background-color: #4aacf3;
+  background-color: rgb(36, 36, 36);
   color: white;
 }
 
@@ -120,19 +112,21 @@ button:hover {
   border-radius: 100%;
   min-height: 90px;
   min-width: 90px;
-  box-shadow: 0 0 2px red, 0 0 8px white, 0 0 12px white, 0 0 18px white,
-    0 0 25px yellow, 0 0 35px red;
+  /* box-shadow: 0 0 2px red, 0 0 8px white, 0 0 12px white, 0 0 18px white,
+    0 0 25px yellow, 0 0 35px red; */
+
+  animation: blackholeGlow 1s linear infinite alternate;
+
   transition-duration: 0.4s;
   text-shadow: 0 0 3px black, 0 0 6px white, 0 0 8px black, 0 0 12px black,
     0 0 18px black, 0 0 22px black;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .startBtn:hover {
   background-color: rgb(36, 36, 36);
   /* text-shadow: 0 0 3px black; */
   font-size: 120%;
-  /* opacity: 0.8; */
 }
 
 .startBtn:after {
@@ -159,7 +153,7 @@ button:hover {
 
 .startBtn:active {
   background-color: rgb(27, 27, 27);
-  font-size: 60%;
+  font-size: 80%;
   transition: all 0.4s;
 }
 
@@ -170,7 +164,7 @@ button:hover {
   background-color: black;
   color: black;
   text-shadow: none;
-  font-size: 20%;
+  font-size: 40%;
   transition: all 0.4s;
 }
 
@@ -219,6 +213,17 @@ button:hover {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+@keyframes blackholeGlow {
+  from {
+    box-shadow: 0 0 3px red, 0 0 8px white, 0 0 12px white, 0 0 18px white,
+      0 0 75px red, 0 0 100px yellow;
+  }
+  to {
+    box-shadow: 0 0 3px red, 0 0 8px white, 0 0 12px white, 0 0 18px white,
+      0 0 25px red, 0 0 100px yellow;
+  }
 }
 
 @media screen and (max-width: 768px) {
